@@ -1,0 +1,5 @@
+- name: restart nginx
+  shell: sudo service nginx restart
+- name: restart app
+  shell: sudo service app restart
+  ignore_errors: true

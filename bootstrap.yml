@@ -1,0 +1,8 @@
+- hosts: all
+  user: vagrant
+  vars:
+    mode: bootstrap
+  roles:
+    - role: common
+      tags:
+        - common

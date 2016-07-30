@@ -1,0 +1,10 @@
+- hosts: all
+  user: vagrant
+  vars:
+    mode: deploy
+  roles:
+    - role: app
+      tags:
+        - app
+
+

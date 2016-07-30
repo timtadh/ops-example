@@ -1,0 +1,12 @@
+- name: install build-essential
+  apt:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - nginx
+  become: true
+- name: disable default site
+  file:
+    path: /etc/nginx/sites-enabeled/default
+    state: absent
+  become: true

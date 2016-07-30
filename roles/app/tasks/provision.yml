@@ -1,0 +1,20 @@
+- name: install python
+  apt:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - python-dev
+    - python-pip
+  become: true
+- name: install virtualenv
+  pip:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - virtualenv
+  become: true
+- file:
+    path: /home/vagrant/app
+    state: directory
+- name: make virtualenv
+  shell: virtualenv --no-site-packages /home/vagrant/app/env

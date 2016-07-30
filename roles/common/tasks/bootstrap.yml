@@ -1,0 +1,7 @@
+- name: install build-essential
+  apt:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - build-essential
+  become: true
