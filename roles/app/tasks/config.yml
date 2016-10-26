@@ -18,10 +18,9 @@
     src: /etc/nginx/sites-available/app.conf
     state: link
   become: true
-- pip:
+- name: install dependencies
+  pip:
     virtualenv: /home/vagrant/app/env
     name: "{{item}}"
     state: latest
-  with_items:
-    - uwsgi
-    - flask
+  with_lines: cat app/requirements.txt

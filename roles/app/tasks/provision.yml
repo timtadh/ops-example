@@ -13,7 +13,8 @@
   with_items:
     - virtualenv
   become: true
-- file:
+- name: make the directory for the app
+  file:
     path: /home/vagrant/app
     state: directory
 - name: make virtualenv

@@ -1,4 +1,4 @@
-- name: install build-essential
+- name: install nginx
   apt:
     name: "{{item}}"
     state: latest
@@ -7,6 +7,7 @@
   become: true
 - name: disable default site
   file:
-    path: /etc/nginx/sites-enabeled/default
+    path: /etc/nginx/sites-enabled/default
     state: absent
   become: true
+  notify: restart nginx

@@ -1,7 +1,7 @@
 - name: make tar
   local_action: shell tar czf app.tar.gz app
 - copy:
-    src: /home/hendersont/stuff/code/ops-example/app.tar.gz
+    src: app.tar.gz
     dest: /home/vagrant/app/app.tar.gz
 - shell: "cd /home/vagrant/app && tar xzf app.tar.gz"
   notify: restart app
