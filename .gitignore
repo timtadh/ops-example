@@ -1,4 +1,5 @@
 *.pyc
 env/
 .vagrant
+*.tar.gz
 
