@@ -6,7 +6,7 @@ Licensed Under BSD 3-Clause.
 
 ## Slides
 
-Read the (slides)[Infrastructure with Ansible.pdf]
+Read the [slides](Infrastructure with Ansible.pdf)
 
 ## Setup Vagrant
 
